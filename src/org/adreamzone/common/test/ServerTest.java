@@ -1,4 +1,4 @@
-package test;
+package org.adreamzone.common.test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

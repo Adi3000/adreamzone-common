@@ -7,7 +7,8 @@ package model.environment;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import model.DreamedElement;
+import org.adreamzone.common.model.DreamedElement;
+
 
 public class Place extends DreamedElement{
 	

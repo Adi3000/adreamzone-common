@@ -3,6 +3,7 @@ package engine.server.connection;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 
+import org.adreamzone.common.engine.EngineLog;
 import org.jboss.netty.bootstrap.ServerBootstrap;
 /**
  * Connection manager. Open a binding port to listen and "may" receipt client
@@ -10,7 +11,6 @@ import org.jboss.netty.bootstrap.ServerBootstrap;
  */
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
 
-import engine.EngineLog;
 
 public class NettyServerChannelControl {
 	

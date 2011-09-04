@@ -5,7 +5,8 @@ package model.creature.build;
 
 import java.io.Serializable;
 
-import model.DreamedElement;
+import org.adreamzone.common.model.DreamedElement;
+
 import model.items.food.Drink;
 import model.items.food.Drug;
 import model.items.food.Food;

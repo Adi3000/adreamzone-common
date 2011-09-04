@@ -1,7 +1,7 @@
 /**
  * Debug class for logging and output, will output on a terminal if asked.
  */
-package engine;
+package org.adreamzone.common.engine;
 
 import java.io.IOException;
 import java.util.logging.ConsoleHandler;
@@ -16,7 +16,7 @@ public class EngineLog{
 	public static String GLOBAL_LOGGER_NAME = "DreamZone-Server";
 	public static String CLIENT_LOGGER_NAME = "DreamZone-Client";
 	private static final EngineLog ENGINE_CLIENT_LOG = new EngineLog(applet.engine.ClientEngine.class.getName(),true);
-	private static final EngineLog ENGINE_SERVER_LOG = new EngineLog(engine.Engine.class.getName(),true);
+	private static final EngineLog ENGINE_SERVER_LOG = new EngineLog(org.adreamzone.common.engine.Engine.class.getName(),true);
 	public static final Logger CLIENT = ENGINE_CLIENT_LOG.logger;
 	public static final Logger SERVER = ENGINE_SERVER_LOG.logger;
 

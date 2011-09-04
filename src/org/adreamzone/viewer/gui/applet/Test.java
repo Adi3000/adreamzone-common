@@ -1,4 +1,4 @@
-package viewer.gui.applet;
+package org.adreamzone.viewer.gui.applet;
 
 import javax.swing.JApplet;
 import java.awt.BorderLayout;

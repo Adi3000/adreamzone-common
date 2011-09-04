@@ -1,4 +1,4 @@
-package engine;
+package org.adreamzone.common.engine;
 
 import java.io.Serializable;
 import java.net.SocketAddress;

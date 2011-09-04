@@ -5,7 +5,8 @@ package model.environment.items;
 
 import java.io.Serializable;
 
-import model.DreamedElement;
+import org.adreamzone.common.model.DreamedElement;
+
 
 public class Building extends DreamedElement{
 	

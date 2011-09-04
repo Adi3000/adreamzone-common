@@ -2,7 +2,8 @@ package engine.common.database;
 
 import java.util.ArrayList;
 
-import engine.EngineLog;
+import org.adreamzone.common.engine.EngineLog;
+
 import engine.common.database.data.AbstractDataObject;
 import engine.common.database.session.DatabaseSession;
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package model;
+package org.adreamzone.common.model;
 
 import engine.common.database.data.AbstractDataObject;
 import model.users.User;
