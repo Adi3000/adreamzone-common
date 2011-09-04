@@ -6,13 +6,13 @@ import java.sql.SQLException;
 import java.sql.Date;
 import java.util.Properties;
 
+import org.adreamzone.common.database.session.HibernateUtils;
 import org.adreamzone.common.engine.EngineLog;
+import org.adreamzone.common.model.creature.build.Creature;
+import org.adreamzone.common.model.creature.build.Statistics;
+import org.adreamzone.common.model.users.User;
 import org.hibernate.Session;
 
-import model.creature.build.Creature;
-import model.creature.build.Statistics;
-import model.users.User;
-import engine.common.database.session.HibernateUtils;
 import engine.server.connection.NettyServerChannelControl;
 
 public class ServerTest {

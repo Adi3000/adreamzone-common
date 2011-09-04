@@ -1,10 +1,10 @@
 package org.adreamzone.common.test;
 
+import org.adreamzone.common.database.session.HibernateUtils;
+import org.adreamzone.common.model.users.User;
 import org.hibernate.Session;
 
-import engine.common.database.session.HibernateUtils;
 
-import model.users.User;
 
 public class TestHibernate {
 

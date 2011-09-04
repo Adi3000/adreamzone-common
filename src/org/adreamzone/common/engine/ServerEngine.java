@@ -8,11 +8,12 @@ import java.util.Arrays;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import model.creature.build.Creature;
-import model.creature.build.Statistics;
-import model.users.User;
-import engine.common.Order;
-import engine.common.OrderType;
+import org.adreamzone.common.Order;
+import org.adreamzone.common.OrderType;
+import org.adreamzone.common.model.creature.build.Creature;
+import org.adreamzone.common.model.creature.build.Statistics;
+import org.adreamzone.common.model.users.User;
+
 import engine.security.Security;
 import engine.server.connection.NettyServerChannelControl;
 

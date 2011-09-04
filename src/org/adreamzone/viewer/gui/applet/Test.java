@@ -8,7 +8,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-import engine.common.Position;
+import org.adreamzone.common.Position;
+
 
 
 public class Test extends JApplet {

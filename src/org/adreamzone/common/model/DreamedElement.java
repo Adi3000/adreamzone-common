@@ -3,8 +3,9 @@
  */
 package org.adreamzone.common.model;
 
-import engine.common.database.data.AbstractDataObject;
-import model.users.User;
+import org.adreamzone.common.database.data.AbstractDataObject;
+import org.adreamzone.common.model.users.User;
+
 
 import net.phys2d.math.Vector2f;
 import net.phys2d.raw.Body;

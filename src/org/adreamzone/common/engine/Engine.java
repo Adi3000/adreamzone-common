@@ -3,10 +3,11 @@ package org.adreamzone.common.engine;
 import java.io.Serializable;
 import java.net.SocketAddress;
 
-import engine.common.Order;
-import engine.common.OrderType;
-import model.creature.build.Creature;
-import model.creature.build.Statistics;
+import org.adreamzone.common.Order;
+import org.adreamzone.common.OrderType;
+import org.adreamzone.common.model.creature.build.Creature;
+import org.adreamzone.common.model.creature.build.Statistics;
+
 //TODO invert Inherit or make a specific class of Engine for server
 public abstract class Engine {
 
