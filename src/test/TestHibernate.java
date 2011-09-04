@@ -1,8 +1,9 @@
 package test;
 
-import org.adreamzone.common.database.session.HibernateUtils;
-import org.adreamzone.common.model.users.User;
 import org.hibernate.Session;
+
+import com.adreamzone.common.database.session.HibernateUtils;
+import com.adreamzone.common.model.users.User;
 
 
 
