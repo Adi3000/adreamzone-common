@@ -21,7 +21,7 @@ public class TestHibernate {
 		user.setPassword("123465");
 		session.beginTransaction();
 		session.save(user);
-		session.getTransaction().commit();
+		//session.getTransaction().commit();
 		session.close();
 		System.out.println("!!!END!!!");
 

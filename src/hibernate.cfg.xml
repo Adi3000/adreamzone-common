@@ -24,6 +24,6 @@
          -->
         <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
 		<!-- Mapping files -->
-      	<mapping resource="model/users/User.hbm.xml"/>
+      	<mapping resource="com/adreamzone/common/model/users/User.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

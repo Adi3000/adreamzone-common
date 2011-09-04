@@ -10,7 +10,6 @@ import org.jboss.netty.channel.Channels;
 public class NettyServerChannelPipelineFactory implements
 		ChannelPipelineFactory {
 
-	@Override
 	public ChannelPipeline getPipeline() throws Exception {
 		// TODO Auto-generated method stub
 		return Channels.pipeline(
