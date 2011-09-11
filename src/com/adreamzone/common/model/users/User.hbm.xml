@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 20 ao??t 2011 14:00:13 by Hibernate Tools 3.3.0.GA -->
 <hibernate-mapping>
-    <class name="com.adreamzone.common.model.users.User" table="Users">
-        <id name="id" type="Integer" access="field">
-            <column name="USER_ID" />
-            <generator class="sequence">
-                <param name="sequence">users_user_id_seq</param>
-            </generator>
-        </id>
-        <property name="login" type="java.lang.String">
-            <column name="USER_LOGIN" />
-        </property>
-        <!-- property name="token" type="java.lang.String">
+ <class name="com.adreamzone.common.model.users.User" table="Users">
+  <id access="field" name="id" type="java.lang.Integer">
+   <column name="USER_ID"/>
+   <generator class="sequence">
+    <param name="sequence">users_user_id_seq</param>
+   </generator>
+  </id>
+  <property generated="never" lazy="false" name="login" type="java.lang.String">
+   <column name="USER_LOGIN"/>
+  </property>
+  <!-- property name="token" type="java.lang.String">
             <column name="USER_TOKEN" />
-        </property-->
-        <!-- property name="lastConnection" type="java.sql.Date">
+        </property
+ property name="lastConnection" type="java.sql.Date">
             <column name="USER_LAST_CONNECTION_DATE" />
         </property-->
-        <property name="password" type="java.lang.String">
-            <column name="USER_PASSWORD" />
-        </property>
-        <!-- >many-to-one name="mainCreature" class="model.creature.build.Creature" fetch="join">
+  <property generated="never" lazy="false" name="password" type="java.lang.String">
+   <column name="USER_PASSWORD"/>
+  </property>
+  <!-- >many-to-one name="mainCreature" class="model.creature.build.Creature" fetch="join">
             <column name="MAINCREATURE" />
         </many-to-one-->
-    </class>
+ </class>
 </hibernate-mapping>
