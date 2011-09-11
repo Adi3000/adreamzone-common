@@ -15,20 +15,18 @@ public class EngineLog{
 	public static final Level TRACE_LEVEL = Level.ALL; 
 	public static String GLOBAL_LOGGER_NAME = "DreamZone-Server";
 	public static String CLIENT_LOGGER_NAME = "DreamZone-Client";
-	//private static final EngineLog ENGINE_CLIENT_LOG = new EngineLog(applet.engine.ClientEngine.class.getName(),true);
 	private static final EngineLog ENGINE_SERVER_LOG = new EngineLog(com.adreamzone.common.engine.Engine.class.getName(),true);
-	//public static final Logger CLIENT = ENGINE_CLIENT_LOG.logger;
-	public static final Logger SERVER = ENGINE_SERVER_LOG.logger;
+	public static final Logger SERVER = ENGINE_SERVER_LOG.getLogger();
 
-	private EngineLog(String name, boolean displayOnConsole)
+	protected EngineLog(String name, boolean displayOnConsole)
 	{
 		logger = Logger.getLogger(name);
-		logger.setLevel(TRACE_LEVEL);
+		getLogger().setLevel(TRACE_LEVEL);
 		if(displayOnConsole)
 		{
 			ConsoleHandler cLogger = new ConsoleHandler();
 			cLogger.setLevel(TRACE_LEVEL);
-			logger.addHandler(cLogger);
+			getLogger().addHandler(cLogger);
 		}
 		//TODO Add a static path for log
 		//Unique fileLog at the moment
@@ -45,6 +43,13 @@ public class EngineLog{
 		}
 		logger.addHandler(file);
 		*/
+	}
+
+	/**
+	 * @return the logger
+	 */
+	public Logger getLogger() {
+		return logger;
 	}
 	
 
