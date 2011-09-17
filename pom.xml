@@ -14,8 +14,8 @@
   </organization>
   <dependencies>
 	  <dependency>
-	      <groupId>net.phys2d</groupId>
-	      <artifactId>phys2d</artifactId>
+	      <groupId>org.newdawn.slick</groupId>
+	      <artifactId>slick</artifactId>
 	      <version>1.0.0</version>
 	    </dependency>
 	    <dependency>
