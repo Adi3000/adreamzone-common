@@ -5,9 +5,16 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>adreamzone-common DEV</name>
   <description>A-Dream-Zone common</description>
-  <scm>
-  	<url>svn://a-dream-zone.com/adreamzone/adreamzone-common/</url>
-  </scm>
+	<ciManagement>
+		<system>Continuum</system>
+		<url>code.a-dream-zone.com/continuum</url>
+	</ciManagement>
+	<scm>
+		<connection>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/</connection>
+		<developerConnection>http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/trunk/</developerConnection>
+		<tag>HEAD</tag>
+		<url>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/</url>
+	</scm>
   <organization>
   	<name>A-Dream-Zone</name>
   	<url>www.a-dream-zone.com</url>
