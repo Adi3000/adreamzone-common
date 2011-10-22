@@ -3,7 +3,7 @@
   <groupId>com.adreamzone</groupId>
   <artifactId>adreamzone-common</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>adreamzone-common DEV</name>
+  <name>A-dream-zone</name>
   <description>A-Dream-Zone common</description>
 	<ciManagement>
 		<system>Continuum</system>
@@ -19,6 +19,29 @@
   	<name>A-Dream-Zone</name>
   	<url>www.a-dream-zone.com</url>
   </organization>
+  <build>
+		<extensions>
+			<!-- begin - needed for deploying to repository using webdav -->
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+			<!-- end - needed for deploying to repository using webdav -->
+		</extensions>
+	</build>
+  <distributionManagement>
+		<repository>
+			<id>internal</id>
+			<name>Internal Release Repository</name>
+			<url>dav:http://code.a-dream-zone.com/archiva/repository/internal/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshot Repository</name>
+			<url>dav:http://code.a-dream-zone.com/archiva/repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
   <dependencies>
 	  <dependency>
 	      <groupId>org.newdawn.slick</groupId>
