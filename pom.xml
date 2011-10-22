@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.adreamzone</groupId>
-  <artifactId>adreamzone-common</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>A-dream-zone</name>
-  <description>A-Dream-Zone common</description>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.adreamzone</groupId>
+	<artifactId>adreamzone-common</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>A-dream-zone</name>
+	<description>A-dream-zone</description>
 	<ciManagement>
 		<system>Continuum</system>
 		<url>code.a-dream-zone.com/continuum</url>
@@ -15,22 +16,20 @@
 		<tag>HEAD</tag>
 		<url>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/</url>
 	</scm>
-  <organization>
-  	<name>A-Dream-Zone</name>
-  	<url>www.a-dream-zone.com</url>
-  </organization>
-  <build>
+	<organization>
+		<name>A-Dream-Zone</name>
+		<url>www.a-dream-zone.com</url>
+	</organization>
+	<build>
 		<extensions>
-			<!-- begin - needed for deploying to repository using webdav -->
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-webdav</artifactId>
 				<version>1.0-beta-2</version>
 			</extension>
-			<!-- end - needed for deploying to repository using webdav -->
 		</extensions>
 	</build>
-  <distributionManagement>
+	<distributionManagement>
 		<repository>
 			<id>internal</id>
 			<name>Internal Release Repository</name>
@@ -42,21 +41,21 @@
 			<url>dav:http://code.a-dream-zone.com/archiva/repository/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-  <dependencies>
-	  <dependency>
-	      <groupId>org.newdawn.slick</groupId>
-	      <artifactId>slick</artifactId>
-	      <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-      <groupId>org.jboss.netty</groupId>
-      <artifactId>netty</artifactId>
-      <version>3.2.4-Final</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate</artifactId>
-      <version>3.6.1</version>
-    </dependency>
-   </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>org.newdawn.slick</groupId>
+			<artifactId>slick</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.netty</groupId>
+			<artifactId>netty</artifactId>
+			<version>3.2.4-Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate</artifactId>
+			<version>3.6.1</version>
+		</dependency>
+	</dependencies>
 </project>
