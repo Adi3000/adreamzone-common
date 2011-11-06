@@ -11,7 +11,7 @@
 		<url>code.a-dream-zone.com/continuum</url>
 	</ciManagement>
 	<scm>
-		<connection>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/trunk</connection>
+		<connection>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/trunk/</connection>
 		<developerConnection>http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/trunk/</developerConnection>
 		<tag>HEAD</tag>
 		<url>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/</url>
@@ -38,7 +38,7 @@
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>Internal Snapshot Repository</name>
-			<url>dav:http://code.a-dream-zone.com/archiva/repository/snapshots</url>
+			<url>dav:http://code.a-dream-zone.com/archiva/repository/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<dependencies>
