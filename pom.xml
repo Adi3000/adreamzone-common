@@ -50,12 +50,12 @@
 		<dependency>
 			<groupId>org.jboss.netty</groupId>
 			<artifactId>netty</artifactId>
-			<version>3.2.4-Final</version>
+			<version>3.2.6.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate</artifactId>
-			<version>3.6.1</version>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.8.Final</version>
 		</dependency>
 	</dependencies>
 </project>
