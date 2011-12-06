@@ -10,6 +10,10 @@ import com.adreamzone.common.model.DreamedElement;
 
 public class Building extends DreamedElement{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1160927332239666964L;
 	protected int width;
 
 	@Override

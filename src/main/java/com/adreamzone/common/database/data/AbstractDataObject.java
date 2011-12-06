@@ -2,7 +2,11 @@ package com.adreamzone.common.database.data;
 
 import java.io.Serializable;
 
-public abstract class AbstractDataObject {
+public abstract class AbstractDataObject implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int databaseOperation;
 	
 	//TODO constructor with parameter FOR_INSERT FOR_DELETE or FOR UPDATE

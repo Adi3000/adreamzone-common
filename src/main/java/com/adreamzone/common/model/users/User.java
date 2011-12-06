@@ -10,9 +10,12 @@ import com.adreamzone.common.database.data.AbstractDataObject;
 import com.adreamzone.common.model.creature.build.Creature;
 
 
-
 public class User extends AbstractDataObject{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1345564181714215141L;
 	public static final User ANONYMOUS_USER = new User();
 	public static final String TABLE_AND_ENTITY_NAME = "USERS";
 	

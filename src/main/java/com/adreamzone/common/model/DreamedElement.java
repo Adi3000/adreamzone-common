@@ -13,6 +13,10 @@ import net.phys2d.raw.Body;
 public abstract class DreamedElement extends AbstractDataObject{
 	
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * User in-game who will possess and manage this {@link DreamedElement}
 	 */
 	protected User owner;

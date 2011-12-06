@@ -34,7 +34,7 @@ public class DatabaseSession {
 		openSession();		
 		this.session.beginTransaction();
 	}
-	
+
 	public void persist(ArrayList<AbstractDataObject> toCommitList){
 		initSession();
 		for(AbstractDataObject modelData : toCommitList)
@@ -42,22 +42,45 @@ public class DatabaseSession {
 			//TODO Set case for update, delete or insert
 			switch(modelData.getDatabaseOperation())
 			{
-				case IDatabaseConstants.DELETE :
-					EngineLog.SERVER.fine("Will delete "+modelData +" on table " + modelData.getTableName());
-					session.delete(modelData);
-				case IDatabaseConstants.INSERT :
-					EngineLog.SERVER.fine("Will insert "+modelData +" on table" + modelData.getTableName());
-					session.save(modelData);
-				case IDatabaseConstants.INSERT_OR_UPDATE :
-					EngineLog.SERVER.fine("Will insert or update "+modelData +" on table " + modelData.getTableName());
-					session.saveOrUpdate(modelData);
-				default :
-					EngineLog.SERVER.severe("Will insert or update "+modelData +" on table " + modelData.getTableName());
-					
+			case IDatabaseConstants.DELETE :
+				EngineLog.SERVER.fine("Will delete "+modelData +" on table " + modelData.getTableName());
+				session.delete(modelData);
+			case IDatabaseConstants.INSERT :
+				EngineLog.SERVER.fine("Will insert "+modelData +" on table" + modelData.getTableName());
+				session.save(modelData);
+			case IDatabaseConstants.INSERT_OR_UPDATE :
+				EngineLog.SERVER.fine("Will insert or update "+modelData +" on table " + modelData.getTableName());
+				session.saveOrUpdate(modelData);
+			default :
+				EngineLog.SERVER.severe("Will insert or update "+modelData +" on table " + modelData.getTableName());
+
 			}
 		}
 	}
-	
+
+	public void persist(AbstractDataObject modelData){
+		initSession();
+		//TODO Set case for update, delete or insert
+		switch(modelData.getDatabaseOperation())
+		{
+		case IDatabaseConstants.DELETE :
+			EngineLog.SERVER.fine("Will delete "+modelData +" on table " + modelData.getTableName());
+			session.delete(modelData);
+			break;
+		case IDatabaseConstants.INSERT :
+			EngineLog.SERVER.fine("Will insert "+modelData +" on table" + modelData.getTableName());
+			session.save(modelData);
+			break;
+		case IDatabaseConstants.INSERT_OR_UPDATE :
+			EngineLog.SERVER.fine("Will insert or update "+modelData +" on table " + modelData.getTableName());
+			session.saveOrUpdate(modelData);
+			break;
+		default :
+			EngineLog.SERVER.fine("Will insert or update "+modelData +" on table " + modelData.getTableName());
+
+		}
+	}
+
 	public boolean commit(){
 		if(isSetForCommitting()){
 			session.getTransaction().commit();
@@ -65,7 +88,7 @@ public class DatabaseSession {
 		}
 		return false;		
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public List<AbstractDataObject> getListOfSqlRequest(String sqlRequest)
 	{
@@ -74,7 +97,7 @@ public class DatabaseSession {
 		List<AbstractDataObject> list =  sqlQuery.list();
 		return list;
 	}
-	
+
 	private void openSession()
 	{
 		if(session == null)
@@ -85,7 +108,7 @@ public class DatabaseSession {
 	{
 		openSession();
 		AbstractDataObject toReturn = (AbstractDataObject)session.get(model.getClass(), model.getId());
-		
+
 		return toReturn;
 	}
 }

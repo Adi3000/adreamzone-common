@@ -14,6 +14,10 @@ import com.adreamzone.common.model.items.food.Food;
 
 public class Creature extends DreamedElement{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4003403337498119078L;
 	protected Statistics stats;
 	protected int score;
 	protected int charisme;
