@@ -1,4 +1,4 @@
-package com.adreamzone.common.model.items.food;
+package com.adreamzone.common.database.data.model.items.food;
 
 public class Food {
 

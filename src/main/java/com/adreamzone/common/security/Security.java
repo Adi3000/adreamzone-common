@@ -6,7 +6,7 @@ import java.util.TreeSet;
 import java.util.UUID;
 
 import com.adreamzone.common.engine.EngineLog;
-import com.adreamzone.common.model.users.User;
+import com.adreamzone.common.database.data.model.users.User;
 import com.adreamzone.common.utils.optimizer.CommonValues;
 
 
@@ -25,6 +25,22 @@ public class Security {
 	public static int generateSessionID(int clientHashCode,SocketAddress client) {
 		// TODO Auto-generated method stub
 		EngineLog.SERVER.info("Anonymous UUID Session asked from " + client.toString());
+		UUID uuid = UUID.randomUUID(); 
+		int uuidHash = uuid.hashCode();
+		EngineLog.SERVER.finer("UUID computed : " + uuid);
+		if (ANONYMOUS_SESSION_ID.add(uuidHash) )
+		{
+			return uuidHash;
+		}
+		return ERROR;
+	}
+	public static int generateSessionID(int clientHashCode,User user) {
+		// TODO Auto-generated method stub
+		EngineLog.SERVER.info("User UUID Session asked from " + user.toString());
+		return generateSessionID(clientHashCode);
+	}
+	private static int generateSessionID(int clientHashCode) {
+		// TODO Auto-generated method stub
 		UUID uuid = UUID.randomUUID(); 
 		int uuidHash = uuid.hashCode();
 		EngineLog.SERVER.finer("UUID computed : " + uuid);

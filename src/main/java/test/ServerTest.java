@@ -1,18 +1,14 @@
 package test;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Date;
-import java.util.Properties;
+import java.sql.Timestamp;
 
 import org.hibernate.Session;
 
 import com.adreamzone.common.database.session.HibernateUtils;
 import com.adreamzone.common.engine.EngineLog;
-import com.adreamzone.common.model.creature.build.Creature;
-import com.adreamzone.common.model.creature.build.Statistics;
-import com.adreamzone.common.model.users.User;
+import com.adreamzone.common.database.data.model.creature.build.Creature;
+import com.adreamzone.common.database.data.model.creature.build.Statistics;
+import com.adreamzone.common.database.data.model.users.User;
 import com.adreamzone.common.server.connection.NettyServerChannelControl;
 
 public class ServerTest {
@@ -48,7 +44,7 @@ public class ServerTest {
 
         User user = new User();
         user.setLogin("Test");
-        user.setLastConnection(new Date(new java.util.Date().getTime()));
+        user.setLastDateLogin(new Timestamp(new java.util.Date().getTime()));
         EngineLog.SERVER.info("Ready to save user");
         
         session.save(user);

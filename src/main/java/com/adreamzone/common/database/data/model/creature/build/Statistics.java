@@ -1,4 +1,4 @@
-package com.adreamzone.common.model.creature.build;
+package com.adreamzone.common.database.data.model.creature.build;
 
 import com.adreamzone.common.engine.Engine;
 

@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.adreamzone.common.model;
+package com.adreamzone.common.database.data.model;
 
 import com.adreamzone.common.database.data.AbstractDataObject;
-import com.adreamzone.common.model.users.User;
+import com.adreamzone.common.database.data.model.users.User;
 
 
 import net.phys2d.math.Vector2f;

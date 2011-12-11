@@ -1,15 +1,15 @@
 /**
  * Some creature which will live in DreamZone
  */
-package com.adreamzone.common.model.creature.build;
+package com.adreamzone.common.database.data.model.creature.build;
 
 import java.io.Serializable;
 
 import com.adreamzone.common.Position;
-import com.adreamzone.common.model.DreamedElement;
-import com.adreamzone.common.model.items.food.Drink;
-import com.adreamzone.common.model.items.food.Drug;
-import com.adreamzone.common.model.items.food.Food;
+import com.adreamzone.common.database.data.model.DreamedElement;
+import com.adreamzone.common.database.data.model.items.food.Drink;
+import com.adreamzone.common.database.data.model.items.food.Drug;
+import com.adreamzone.common.database.data.model.items.food.Food;
 
 
 public class Creature extends DreamedElement{

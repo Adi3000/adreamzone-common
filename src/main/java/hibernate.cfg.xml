@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
-                                         "http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
- <session-factory name="">
+ <session-factory name="jdbc/adreamzone">
   <!-- local connection properties -->
   <property name="hibernate.connection.url">jdbc:postgresql://192.168.26.1:5432/ADreamZone_dev</property>
   <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>

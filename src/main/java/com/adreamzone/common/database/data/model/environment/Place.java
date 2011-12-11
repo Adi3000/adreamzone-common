@@ -2,12 +2,12 @@
  * Place builded by user or predefined from some package
  * Container of some {@link Building} put inside and some {@link Creature} living here
  */
-package com.adreamzone.common.model.environment;
+package com.adreamzone.common.database.data.model.environment;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import com.adreamzone.common.model.DreamedElement;
+import com.adreamzone.common.database.data.model.DreamedElement;
 
 
 public class Place extends DreamedElement{

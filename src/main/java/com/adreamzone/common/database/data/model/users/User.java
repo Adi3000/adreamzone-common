@@ -1,13 +1,13 @@
 /**
  * Account which will interact with {@link DreamedElement} to be owner and author
  */
-package com.adreamzone.common.model.users;
+package com.adreamzone.common.database.data.model.users;
 
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 import com.adreamzone.common.database.data.AbstractDataObject;
-import com.adreamzone.common.model.creature.build.Creature;
+import com.adreamzone.common.database.data.model.creature.build.Creature;
 
 
 public class User extends AbstractDataObject{
@@ -21,10 +21,13 @@ public class User extends AbstractDataObject{
 	
 	private int id;
 	private String login;
-	private String token;
-	private Date lastConnection;
+	private int token;
+	private Timestamp lastDateLogin;
 	private Creature mainCreature;
 	private String password;
+	private String mail;
+	private String lastHostNameLogin;
+	private String lastIpLogin;
 	
 	public Integer getId()
 	{
@@ -45,26 +48,14 @@ public class User extends AbstractDataObject{
 	/**
 	 * @param token the token to set
 	 */
-	public void setToken(String token) {
+	public void setToken(int token) {
 		this.token = token;
 	}
 	/**
 	 * @return the token
 	 */
-	public String getToken() {
+	public int getToken() {
 		return token;
-	}
-	/**
-	 * @param lastConnection the lastConnection to set
-	 */
-	public void setLastConnection(Date lastConnection) {
-		this.lastConnection = lastConnection;
-	}
-	/**
-	 * @return the lastConnection
-	 */
-	public Date getLastConnection() {
-		return lastConnection;
 	}
 	/**
 	 * @param mainCreature the mainCreature to set
@@ -90,11 +81,60 @@ public class User extends AbstractDataObject{
 	public String getPassword() {
 		return password;
 	}
+	/**
+	 * @return the lastHostNameLogin
+	 */
+	public String getLastHostNameLogin() {
+		return lastHostNameLogin;
+	}
+	/**
+	 * @param lastHostNameLogin the lastHostNameLogin to set
+	 */
+	public void setLastHostNameLogin(String lastHostNameLogin) {
+		this.lastHostNameLogin = lastHostNameLogin;
+	}
+	/**
+	 * @return the mail
+	 */
+	public String getMail() {
+		return mail;
+	}
+	/**
+	 * @return the lastDateLogin
+	 */
+	public Timestamp getLastDateLogin() {
+		return lastDateLogin;
+	}
+	/**
+	 * @param lastDateLogin the lastDateLogin to set
+	 */
+	public void setLastDateLogin(Timestamp lastDateLogin) {
+		this.lastDateLogin = lastDateLogin;
+	}
+	/**
+	 * @return the lastIpLogin
+	 */
+	public String getLastIpLogin() {
+		return lastIpLogin;
+	}
+	/**
+	 * @param lastIpLogin the lastIpLogin to set
+	 */
+	public void setLastIpLogin(String lastIpLogin) {
+		this.lastIpLogin = lastIpLogin;
+	}
+	/**
+	 * @param mail the mail to set
+	 */
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
 	@Override
 	public String getTableName() {
 		// TODO Auto-generated method stub
 		return TABLE_AND_ENTITY_NAME;
 	}
+
 	
 	
 

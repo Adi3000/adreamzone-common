@@ -5,8 +5,8 @@ import java.net.SocketAddress;
 
 import com.adreamzone.common.Order;
 import com.adreamzone.common.OrderType;
-import com.adreamzone.common.model.creature.build.Creature;
-import com.adreamzone.common.model.creature.build.Statistics;
+import com.adreamzone.common.database.data.model.creature.build.Creature;
+import com.adreamzone.common.database.data.model.creature.build.Statistics;
 
 //TODO invert Inherit or make a specific class of Engine for server
 public abstract class Engine {
