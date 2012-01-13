@@ -14,8 +14,15 @@ import com.adreamzone.common.engine.EngineLog;
 
 public class DatabaseSession {
 
-	private Session session;
+	protected Session session;
 
+	public DatabaseSession(DatabaseSession db){
+		this.session = db.getSession();
+	}
+	
+	public DatabaseSession(){
+		this.session = this.getSession();
+	}
 	/**
 	 * Return true if a persist is engaged on this session. (It means 
 	 * that a transaction has began and has not finished yet)
@@ -29,14 +36,24 @@ public class DatabaseSession {
 	/**
 	 * Initialize session for a modification request
 	 */
-	private void initSession() {
+	private void initTransaction() {
 		// TODO Auto-generated method stub
 		openSession();		
 		this.session.beginTransaction();
 	}
+	
+	/**
+	 * Return the Hibernate session. Create it if not opened first
+	 * @return
+	 */
+	public Session getSession(){
+		openSession();
+		return session;
+	}
+	
 
 	public void persist(ArrayList<AbstractDataObject> toCommitList){
-		initSession();
+		initTransaction();
 		for(AbstractDataObject modelData : toCommitList)
 		{
 			//TODO Set case for update, delete or insert
@@ -59,7 +76,7 @@ public class DatabaseSession {
 	}
 
 	public void persist(AbstractDataObject modelData){
-		initSession();
+		initTransaction();
 		//TODO Set case for update, delete or insert
 		switch(modelData.getDatabaseOperation())
 		{

@@ -19,9 +19,10 @@ public class User extends AbstractDataObject{
 	public static final User ANONYMOUS_USER = new User();
 	public static final String TABLE_AND_ENTITY_NAME = "USERS";
 	
-	private int id;
+	private Integer id;
+
 	private String login;
-	private int token;
+	private Integer token;
 	private Timestamp lastDateLogin;
 	private Creature mainCreature;
 	private String password;
@@ -32,6 +33,12 @@ public class User extends AbstractDataObject{
 	public Integer getId()
 	{
 		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	/**
 	 * @param login the login to set
@@ -48,13 +55,13 @@ public class User extends AbstractDataObject{
 	/**
 	 * @param token the token to set
 	 */
-	public void setToken(int token) {
+	public void setToken(Integer token) {
 		this.token = token;
 	}
 	/**
 	 * @return the token
 	 */
-	public int getToken() {
+	public Integer getToken() {
 		return token;
 	}
 	/**
