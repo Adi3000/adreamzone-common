@@ -105,6 +105,14 @@ public class DatabaseSession {
 		}
 		return false;		
 	}
+	
+	public boolean rollback(){
+		if(isSetForCommitting()){
+			session.getTransaction().rollback();
+			return true;
+		}
+		return false;
+	}
 
 	@SuppressWarnings("unchecked")
 	public List<AbstractDataObject> getListOfSqlRequest(String sqlRequest)
