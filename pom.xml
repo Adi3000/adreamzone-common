@@ -7,7 +7,6 @@
 	<name>A-dream-zone</name>
 	<description>A-dream-zone</description>
 	<ciManagement>
-		<system>Continuum</system>
 		<url>code.a-dream-zone.com/continuum</url>
 	</ciManagement>
 	<scm>
@@ -20,32 +19,11 @@
 		<name>A-Dream-Zone</name>
 		<url>http://www.a-dream-zone.com</url>
 	</organization>
-	<build>
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-webdav</artifactId>
-				<version>1.0-beta-2</version>
-			</extension>
-		</extensions>
-	</build>
-	<distributionManagement>
-		<repository>
-			<id>internal</id>
-			<name>Internal Release Repository</name>
-			<url>dav:http://code.a-dream-zone.com/archiva/repository/internal/</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>Internal Snapshot Repository</name>
-			<url>dav:http://code.a-dream-zone.com/archiva/repository/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
 	<dependencies>
 		<dependency>
-			<groupId>org.newdawn.slick</groupId>
+			<groupId>slick</groupId>
 			<artifactId>slick</artifactId>
-			<version>1.0.0</version>
+			<version>274</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.netty</groupId>
@@ -60,7 +38,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>8.4-702</version>
+			<version>9.1-902</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-beanutils</groupId>
