@@ -12,6 +12,10 @@ import com.adreamzone.common.OrderType;
 
 public class NettyTransferredOrder extends Order {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6556748012788804328L;
+	/**
 	 * from who come instruction and where to put answer
 	 */
 	private UserChannel from;
