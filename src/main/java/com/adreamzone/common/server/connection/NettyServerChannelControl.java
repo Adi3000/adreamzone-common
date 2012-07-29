@@ -4,13 +4,13 @@ import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
 
 import org.jboss.netty.bootstrap.ServerBootstrap;
+import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
+
+import com.adreamzone.common.engine.EngineLog;
 /**
  * Connection manager. Open a binding port to listen and "may" receipt client
  * connection (not sure because of my few understanding of Netty Framework) 
  */
-import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
-
-import com.adreamzone.common.engine.EngineLog;
 
 
 public class NettyServerChannelControl {

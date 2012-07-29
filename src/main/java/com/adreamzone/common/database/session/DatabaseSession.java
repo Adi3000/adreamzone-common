@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-import org.hibernate.loader.custom.sql.SQLCustomQuery;
 
 import com.adreamzone.common.database.IDatabaseConstants;
 import com.adreamzone.common.database.data.AbstractDataObject;

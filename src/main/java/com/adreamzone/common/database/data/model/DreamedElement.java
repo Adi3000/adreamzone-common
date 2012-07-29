@@ -3,12 +3,11 @@
  */
 package com.adreamzone.common.database.data.model;
 
-import com.adreamzone.common.database.data.AbstractDataObject;
-import com.adreamzone.common.database.data.model.users.User;
-
-
 import net.phys2d.math.Vector2f;
 import net.phys2d.raw.Body;
+
+import com.adreamzone.common.database.data.AbstractDataObject;
+import com.adreamzone.common.database.data.model.users.User;
 
 public abstract class DreamedElement extends AbstractDataObject{
 	
