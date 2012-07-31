@@ -7,13 +7,13 @@
 	<name>A-dream-zone</name>
 	<description>A-dream-zone</description>
 	<ciManagement>
-		<url>code.a-dream-zone.com/continuum</url>
+		<url>code.a-dream-zone.com/nexus</url>
+		<system>Nexus</system>
 	</ciManagement>
 	<scm>
-		<connection>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/trunk/</connection>
-		<developerConnection>http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/trunk/</developerConnection>
-		<tag>HEAD</tag>
-		<url>scm:svn:http://code.a-dream-zone.com/svn/adreamzone/adreamzone-common/</url>
+		<connection>scm:git:https://github.com/Adi3000/adreamzone-common</connection>
+		<developerConnection>scm:git:git@github.com:Adi3000/adreamzone-common.git</developerConnection>
+		<url>https://github.com/Adi3000/adreamzone-common.git</url>
 	</scm>
 	<organization>
 		<name>A-Dream-Zone</name>
